@@ -32,7 +32,7 @@ const BUILT_IN_FONTS={
   "braen-cursive":{name:"Braen's Cursive",file:"fonts/braen-cursive.ttf"},
   "nolna-cursive":{name:"Nolna's Cursive",file:"fonts/nolna-cursive.ttf"},
   evil:{name:"Evil font",file:"fonts/evil.ttf"},
-  happy:{name:"Happy Font",file:"fonts/happy.ttf"},
+  happy:{name:"Coaster",file:"fonts/coaster.ttf"},
   lovely:{name:"Lovely Font",file:"fonts/lovely.ttf"}
 };
 let activeFontName='BuiltInTTF',activeFontFace=null;const $=id=>document.getElementById(id);const controls=['text','size','spacing','rotation','align','valign','builtInFont','color1','color1hex','color2','color2hex','gradient','opacity','outlineOn','outlineWidth','outlineColor','shadowOn','shadowX','shadowY','shadowBlur','shadowColor','glowOn','glow','cw','ch','bgColor','bgHex','transparent'];function hex(v){return /^#[0-9a-fA-F]{6}$/.test(v)?v:'#ffffff'}function syncColor(a,b){$(a).addEventListener('input',()=>{$(b).value=$(a).value;draw()});$(b).addEventListener('change',()=>{$(a).value=hex($(b).value);draw()})}syncColor('color1','color1hex');syncColor('color2','color2hex');syncColor('bgColor','bgHex');controls.forEach(id=>{const e=$(id);if(e){e.addEventListener('input',draw);e.addEventListener('change',draw)}});$('size').addEventListener('input',()=>$('sizeVal').textContent=$('size').value);$('opacity').addEventListener('input',()=>$('opacityVal').textContent=$('opacity').value+'%');$('glow').addEventListener('input',()=>$('glowVal').textContent=$('glow').value);
